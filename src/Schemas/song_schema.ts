@@ -1,6 +1,9 @@
 import { SongInterface } from "../Interfaces/song_interface";
 import { Schema } from "mongoose";
 
+/**
+ * Esquema que define los aributos de los objetos song y sus validaciones
+ */
 export const SongSchema = new Schema<SongInterface>({
   song_name: {
     type: String,

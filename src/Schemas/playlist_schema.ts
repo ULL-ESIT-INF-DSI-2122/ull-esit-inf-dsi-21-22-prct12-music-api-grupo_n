@@ -2,6 +2,9 @@ import { PlaylistInterface } from "../Interfaces/playlist_interface";
 import { SongSchema } from "./song_schema";
 import { Schema } from "mongoose";
 
+/**
+ * Esquema que define los aributos de los objetos playlist y sus validaciones
+ */
 export const PlaylistSchema = new Schema<PlaylistInterface>({
   playlist_name: {
     type: String,
