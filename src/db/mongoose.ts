@@ -1,10 +1,12 @@
 import { connect } from 'mongoose';
 
-connect('mongodb://127.0.0.1:27017/music-library', {
+const mongoose_url = 'mongodb://127.0.0.1:27017/music-library';
+
+connect(mongoose_url, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
-  //useFindAndModify: false,
+  useFindAndModify: false,
 }).then(() => {
   console.log('Connection to MongoDB server established');
 }).catch(() => {
