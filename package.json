@@ -7,7 +7,7 @@
     "coverage": "nyc npm test && nyc report --reporter=lcov",
     "doc": "typedoc",
     "test": "mocha",
-    "start": "tsc-watch --onSuccess \"node dist/PE102-09-05/server_express.js\""
+    "start": "tsc-watch --onSuccess \"node dist/server/server.js\""
   },
   "keywords": [],
   "author": "",
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "chalk": "^4.1.2",
+    "express": "^4.18.1",
     "mongodb": "^3.7.3",
     "mongoose": "^5.13.14",
     "validator": "^13.7.0",
