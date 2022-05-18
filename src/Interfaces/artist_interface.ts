@@ -8,5 +8,5 @@ export interface ArtistInterface extends Document {
   artist_name: string,
   gender: string[],
   songs: SongInterface[],
-  listeners: number,
+  listeners_mth: number,
 }

@@ -11,3 +11,4 @@ export interface SongInterface extends Document {
   single: boolean,
   plays: number,
 }
+ 
