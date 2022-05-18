@@ -1,23 +1,21 @@
-// import * as express from 'express';
-// import './db/mongoose';
+import * as express from 'express';
+import '../db/mongoose';
+import { postRouter } from '../routers/post';
+import { getRouter } from '../routers/get';
+import { patchRouter } from '../routers/patch';
+import { deleteRouter } from '../routers/delete';
+import { defaultRouter } from '../routers/default';
 
-// const app = express();
-// const port = process.env.PORT || 3000;
+const app = express();
+app.use(express.json());
+app.use(postRouter);
+app.use(getRouter);
+app.use(patchRouter);
+app.use(deleteRouter);
+app.use(defaultRouter);
 
-// app.use(express.json());
+const port = process.env.PORT || 3000;
 
-// app.post('/notes', (req, res) => {
-//   const note = new Note(req.body);
-
-//   // llamar a una funcion addsong por ejemplo
-//   note.save().then((note) => {
-//     res.send(note);
-//   }).catch((error) => {
-//     res.send(error);
-//   });
-// });
-
-// app.listen(port, () => {
-//   console.log(`Server is up on port ${port}`);
-// });
-
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
+});
