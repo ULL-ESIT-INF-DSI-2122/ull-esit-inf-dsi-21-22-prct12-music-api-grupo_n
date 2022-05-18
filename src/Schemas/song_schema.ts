@@ -28,7 +28,7 @@ export const SongSchema = new Schema<SongInterface>({
     },
   },
   duration: {
-    type: Number,
+    type: Number, 
     require: true,
     validate: (value: number) => {
       if (value <= 0) {

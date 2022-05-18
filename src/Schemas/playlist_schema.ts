@@ -37,4 +37,4 @@ export const PlaylistSchema = new Schema<PlaylistInterface>({
            'Clasica', 'Blues', 'R&B', 'ElectroSwing', 'Reage', 'Reggeaton', 
            'Salsa', 'Pop', 'Banda sonora', 'Jazz', 'Trap', 'Country', 'Soul'],
   },
-});
+}); 

@@ -28,7 +28,7 @@ export const ArtistSchema = new Schema<ArtistInterface>({
     type: [SongSchema],
     require: true,
   },
-  listeners: {
+  listeners_mth: {
     type: String,
     trim: true,
     require: true,
