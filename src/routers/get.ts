@@ -3,7 +3,7 @@ import { song } from '../models/song_models';
 import { artist } from '../models/artist_model';
 import { playlist } from '../models/playlist_model';
 
-//leer
+//leer (funciona para cada tipo, nombre e id)
 
 export const getRouter = express.Router();
 
@@ -27,7 +27,7 @@ getRouter.get('/songs/:id', (req, res) => {
       res.send(song);
     }
   }).catch((error) => {
-    res.status(501).send();
+    res.status(501).send(error);
   });
 });
 
@@ -68,7 +68,7 @@ getRouter.get('/playlists', (req, res) => {
 getRouter.get('/playlists/:id', (req, res) => {
   playlist.findById(req.params.id).then((playlist) => {
     if (!playlist) {
-      res.status(404).send();
+      res.status(404).send('Playlist not found');
     } else {
       res.send(playlist);
     }

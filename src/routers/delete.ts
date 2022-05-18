@@ -3,6 +3,8 @@ import { song } from '../models/song_models';
 import { artist } from '../models/artist_model';
 import { playlist } from '../models/playlist_model';
 
+//Elimina (funciona para cada tipo, nombre e id)
+
 export const deleteRouter = express.Router();
 
 deleteRouter.delete('/songs', (req, res) => {
@@ -11,7 +13,7 @@ deleteRouter.delete('/songs', (req, res) => {
       error: 'A Song must be provided',
     });
   } else {
-    song.findOneAndDelete({title: req.query.song_name.toString()}).then((song) => {
+    song.findOneAndDelete({song_name: req.query.song_name.toString()}).then((song) => {
       if (!song) {
         res.status(404).send({
           error: 'Song not found',
@@ -73,7 +75,7 @@ deleteRouter.delete('/artists/:id', (req, res) => {
   });
 });
 
-deleteRouter.delete('/playlist', (req, res) => {
+deleteRouter.delete('/playlists', (req, res) => {
   if (!req.query.playlist_name) {
     res.status(400).send({
       error: 'A title must be provided',
@@ -93,7 +95,7 @@ deleteRouter.delete('/playlist', (req, res) => {
   }
 });
 
-deleteRouter.delete('/playlist/:id', (req, res) => {
+deleteRouter.delete('/playlists/:id', (req, res) => {
   playlist.findByIdAndDelete(req.params.id).then((playlist) => {
     if (!playlist) {
       res.status(404).send();

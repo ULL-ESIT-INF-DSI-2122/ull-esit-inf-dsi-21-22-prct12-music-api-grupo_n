@@ -1,6 +1,6 @@
 import * as express from 'express';
 
-//Default
+//Default (funciona para las rutas que no existen o no estan desarrolladas)
 
 export const defaultRouter = express.Router();
 

@@ -3,7 +3,7 @@ import { song } from '../models/song_models';
 import { artist } from '../models/artist_model';
 import { playlist } from '../models/playlist_model';
 
-//modificar
+//modificar (funciona para cada tipo, nombre e id)
 
 export const patchRouter = express.Router();
 

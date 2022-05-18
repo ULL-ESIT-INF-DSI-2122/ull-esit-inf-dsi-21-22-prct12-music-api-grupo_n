@@ -3,7 +3,7 @@ import { song } from '../models/song_models';
 import { artist } from '../models/artist_model';
 import { playlist } from '../models/playlist_model';
 
-//añadir objetos (revisar)
+//añadir objetos (Funciona para cada tipo)
 
 export const postRouter = express.Router();
 
