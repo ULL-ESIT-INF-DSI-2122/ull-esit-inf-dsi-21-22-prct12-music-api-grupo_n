@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "heroku-postbuild": "tsc",
     "coverage": "nyc npm test && nyc report --reporter=lcov",
     "doc": "typedoc",
     "test": "mocha",
-    "start": "tsc-watch --onSuccess \"node dist/server/server.js\""
+    "start": "node dist/server/server.js",
+    "dev": "tsc-watch --onSuccess \"node dist/server/server.js\""
+  },
+  "engines": {
+    "node": "18.x"
   },
   "keywords": [],
   "author": "",
