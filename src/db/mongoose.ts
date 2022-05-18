@@ -1,6 +1,6 @@
 import { connect } from 'mongoose';
 
-const mongoose_url = 'mongodb://127.0.0.1:27017/music-library';
+const mongoose_url = process.env.MONGODB_URL || 'mongodb://127.0.0.1:27017/music-library';
 
 connect(mongoose_url, {
   useNewUrlParser: true,
