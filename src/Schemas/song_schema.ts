@@ -18,7 +18,6 @@ export const SongSchema = new Schema<SongInterface>({
   },
   author: {
     type: String,
-    unique: true,
     trim: true,
     require: true,
     validate: (value: string) => {
